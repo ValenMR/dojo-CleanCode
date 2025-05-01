@@ -32,7 +32,7 @@ class MainActivity : ComponentActivity() {
                     OutlinedTextField(
                         value = number1.value,
                         onValueChange = {
-                            val it = ""
+                            //val it = ""
                             number1.value = it
                         },
                         label = { Text("Number 1") }
@@ -41,7 +41,7 @@ class MainActivity : ComponentActivity() {
                     OutlinedTextField(
                         value = number2.value,
                         onValueChange = {
-                            val it = ""
+                            //val it = ""
                             number2.value = it
                         },
                         label = { Text("Number 2") }
