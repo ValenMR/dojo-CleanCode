@@ -28,23 +28,23 @@ class MainActivity : ComponentActivity() {
                 val result = remember { mutableStateOf("") }
 
                 Column(modifier = Modifier.padding(16.dp)) {
-                    Text(text = "Ingresa el primer dígito")
+                    Text(text = "Enter number 1")
                     OutlinedTextField(
                         value = number1.value,
                         onValueChange = {
                             //val it = ""
                             number1.value = it
                         },
-                        label = { Text("Número 1") }
+                        label = { Text("Number 1") }
                     )
-                    Text(text = "Ingresa el segundo dígito")
+                    Text(text = "Enter number 2")
                     OutlinedTextField(
                         value = number2.value,
                         onValueChange = {
                             //val it = ""
                             number2.value = it
                         },
-                        label = { Text("Número 2") }
+                        label = { Text("Number 2") }
                     )
                     Button(onClick = {
                         if (number1.value.isEmpty() || number2.value.isEmpty()) {
@@ -52,13 +52,13 @@ class MainActivity : ComponentActivity() {
                         } else {
                             try {
                                 val sum = number1.value.toInt() + number2.value.toInt()
-                                result.value = "Resultado: $sum"
+                                result.value = "Result: $sum"
                             } catch (e: Exception) {
                                 result.value = "Invalid input"
                             }
                         }
                     }) {
-                        Text("Suma")
+                        Text("Add")
                     }
                     Text(text = result.value)
                 }
